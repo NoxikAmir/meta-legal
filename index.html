@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facebook Video Scheduler</title>
+  <style>
+    :root {
+      --bg-dark: #0d1117;
+      --bg-card: #161b22;
+      --text-light: #c9d1d9;
+      --text-muted: #8b949e;
+      --accent: #2e90fa;
+      --accent-hover: #1e6ddf;
+      --border: #30363d;
+      --success: #198754;
+      --danger: #dc3545;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      color: var(--accent);
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: var(--text-light);
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .card h2 {
+      margin-top: 0;
+      font-size: 20px;
+      color: var(--accent);
+    }
+    .card p {
+      margin: 10px 0;
+      color: var(--text-muted);
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .links a {
+      flex: 1;
+      min-width: 200px;
+      text-align: center;
+      padding: 12px 16px;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .links a:hover {
+      background: var(--accent-hover);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Facebook Video Scheduler</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#legal">Legal</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <div class="card" id="about">
+      <h2>About the Project</h2>
+      <p>
+        <b>Facebook Video Scheduler</b> is a lightweight automation tool developed by 
+        <b>AmirNoxik / Noxik Media Inc</b> to simplify publishing workflows.  
+        It automates downloading popular YouTube videos and schedules them 
+        for posting to Facebook Pages at predefined time slots 
+        (22:00, 01:00, 04:00 GMT+4).
+      </p>
+      <p>
+        This tool is intended for personal and professional publishing needs 
+        while staying compliant with Meta’s developer policies.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>How It Works</h2>
+      <p>
+        The scheduler works in three main steps:
+      </p>
+      <ul>
+        <li>Extracts metadata and downloads the best-quality YouTube video + thumbnail.</li>
+        <li>Uploads the video to Facebook using the official <code>graph-video.facebook.com</code> API.</li>
+        <li>Schedules publishing at the chosen slot with the preferred thumbnail.</li>
+      </ul>
+      <p>
+        All access tokens are securely stored as environment variables. 
+        No personal data is collected beyond what’s strictly necessary for publishing.
+      </p>
+    </div>
+
+    <div class="card" id="legal">
+      <h2>Legal & Policies</h2>
+      <p>To stay compliant with Meta policies, we provide the following public documents:</p>
+      <div class="links">
+        <a href="privacy.html" target="_blank">Privacy Policy</a>
+        <a href="terms.html" target="_blank">Terms of Service</a>
+        <a href="deletion.html" target="_blank">Data Deletion</a>
+      </div>
+    </div>
+
+    <div class="card" id="contact">
+      <h2>Contact</h2>
+      <p>
+        For questions, issues, or data deletion requests, please email:  
+        <a href="mailto:noxikamir@gmail.com">noxikamir@gmail.com</a>
+      </p>
+      <p>
+        Company: <b>Noxik Media Inc</b> · Legal jurisdiction: <b>USA</b>
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Facebook Video Scheduler · Built by AmirNoxik / Noxik Media Inc.  
+    | <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a>
+  </footer>
+</body>
+</html>
